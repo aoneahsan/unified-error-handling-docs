@@ -1,0 +1,16 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Unified Error Handling logo">
+  <defs>
+    <linearGradient id="ueh-logo-grad" x1="6" y1="4" x2="42" y2="44" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fb7185"/>
+      <stop offset="0.55" stop-color="#e11d48"/>
+      <stop offset="1" stop-color="#9f1239"/>
+    </linearGradient>
+  </defs>
+  <rect x="3" y="3" width="42" height="42" rx="11" fill="url(#ueh-logo-grad)"/>
+  <!-- Shield: error handling / safety -->
+  <path d="M24 11.5l9 3.4v6.8c0 6.4-3.9 11-9 12.8-5.1-1.8-9-6.4-9-12.8v-6.8l9-3.4z" fill="#fff" fill-opacity="0.16"/>
+  <path d="M24 11.5l9 3.4v6.8c0 6.4-3.9 11-9 12.8-5.1-1.8-9-6.4-9-12.8v-6.8l9-3.4z" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/>
+  <!-- Alert mark inside shield -->
+  <rect x="22.6" y="17.5" width="2.8" height="8.2" rx="1.4" fill="#fff"/>
+  <circle cx="24" cy="29.4" r="1.7" fill="#fff"/>
+</svg>

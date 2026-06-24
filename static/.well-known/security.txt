@@ -1,0 +1,24 @@
+# Unified Error Handling — Security Contact (RFC 9116)
+# https://unified-error-handling-docs.aoneahsan.com/.well-known/security.txt
+
+Contact: mailto:aoneahsan@gmail.com
+Contact: https://aoneahsan.com
+Expires: 2027-06-24T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://unified-error-handling-docs.aoneahsan.com/.well-known/security.txt
+
+# Responsible disclosure
+#
+# unified-error-handling routes application error data to third-party tracking
+# services, so security reports are taken seriously. Please report any issue
+# affecting the library (the core store, an adapter, the interceptors, or the
+# React surface) via email to aoneahsan@gmail.com. Include:
+#
+#   1. A description of the issue and the affected component.
+#   2. Steps to reproduce.
+#   3. The impact you assess.
+#   4. Your contact details and (optionally) a PGP public key.
+#
+# Initial response target: within 72 hours.
+# Out of scope: vulnerabilities in the third-party SDKs themselves (report those
+# to the respective vendor), and findings that depend on a compromised device.

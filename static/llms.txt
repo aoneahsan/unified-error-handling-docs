@@ -1,0 +1,50 @@
+# Unified Error Handling — Documentation Index
+
+> unified-error-handling is a lightweight, zero-dependency TypeScript error-handling library that puts multiple error-tracking services behind ONE provider-less API. You call `initialize()` once and `useAdapter('<name>')` to route errors to Sentry, Firebase Crashlytics, Datadog, Bugsnag, Rollbar, LogRocket, Raygun, AppCenter, a built-in console adapter, or your own custom adapter. The third-party SDKs are loaded dynamically (`import()`) only when you use an adapter, so the core stays dependency-free and tree-shakeable. Author: Ahsan Mahmood (https://aoneahsan.com). npm: https://www.npmjs.com/package/unified-error-handling. MIT-licensed.
+
+## About
+
+The library exposes a singleton `errorStore` plus standalone functions (`initialize`, `captureError`, `captureMessage`, `setUser`, `setContext`, `addBreadcrumb`, `clearBreadcrumbs`, `useAdapter`, `removeAdapter`, `flush`, `reset`, `subscribe`, `registerAdapter`). No React context/provider is required — the store works in any framework or in vanilla JS. Errors are normalized to a `NormalizedError`, enriched with device/context/breadcrumb data, optionally filtered by a `beforeSend` hook, queued while offline, then dispatched to the single active adapter. Optional global handlers capture uncaught errors and unhandled promise rejections; optional interceptors capture `console.error` and failed `fetch`/XHR requests. The optional `unified-error-handling/react` entry point adds an `ErrorBoundary`, `withErrorBoundary` HOC, and hooks (`useErrorHandler`, `useErrorStore`, `useAsyncOperation`, and more). React is an optional peer dependency; the core has zero dependencies.
+
+This `llms.txt` follows the [llmstxt.org](https://llmstxt.org) spec.
+
+## Getting Started
+
+- [Introduction](https://unified-error-handling-docs.aoneahsan.com/intro): what it is, what it does and does not do.
+- [Installation](https://unified-error-handling-docs.aoneahsan.com/getting-started/installation): npm/yarn install + the optional per-service SDKs you add yourself.
+- [Quick Start](https://unified-error-handling-docs.aoneahsan.com/getting-started/quick-start): initialize → useAdapter → captureError in 5 minutes.
+- [Configuration](https://unified-error-handling-docs.aoneahsan.com/getting-started/configuration): the full ErrorStoreConfig shape.
+
+## Guides
+
+- [Adapters](https://unified-error-handling-docs.aoneahsan.com/guides/adapters): how dynamic adapter loading and switching works.
+- [Context & breadcrumbs](https://unified-error-handling-docs.aoneahsan.com/guides/context-and-breadcrumbs): users, tags, extra data, and navigation breadcrumbs.
+- [Offline & interceptors](https://unified-error-handling-docs.aoneahsan.com/guides/offline-and-interceptors): the offline queue, console capture, and network capture.
+- [Custom adapters](https://unified-error-handling-docs.aoneahsan.com/guides/custom-adapters): send errors to your own backend.
+- [React](https://unified-error-handling-docs.aoneahsan.com/guides/react): ErrorBoundary + hooks.
+
+## Providers
+
+- [Overview + capability matrix](https://unified-error-handling-docs.aoneahsan.com/providers/overview)
+- [Console (built-in)](https://unified-error-handling-docs.aoneahsan.com/providers/console)
+- [Sentry](https://unified-error-handling-docs.aoneahsan.com/providers/sentry)
+- [Firebase Crashlytics](https://unified-error-handling-docs.aoneahsan.com/providers/firebase)
+- [Datadog](https://unified-error-handling-docs.aoneahsan.com/providers/datadog)
+- [Bugsnag](https://unified-error-handling-docs.aoneahsan.com/providers/bugsnag)
+- [Rollbar](https://unified-error-handling-docs.aoneahsan.com/providers/rollbar)
+- [LogRocket](https://unified-error-handling-docs.aoneahsan.com/providers/logrocket)
+- [Raygun](https://unified-error-handling-docs.aoneahsan.com/providers/raygun)
+- [AppCenter](https://unified-error-handling-docs.aoneahsan.com/providers/appcenter)
+- [Custom adapter](https://unified-error-handling-docs.aoneahsan.com/providers/custom)
+
+## API Reference
+
+- [Core API](https://unified-error-handling-docs.aoneahsan.com/api/core): every exported function.
+- [React API](https://unified-error-handling-docs.aoneahsan.com/api/react): ErrorBoundary, withErrorBoundary, and hooks.
+- [Types](https://unified-error-handling-docs.aoneahsan.com/api/types): NormalizedError, ErrorContext, Breadcrumb, ErrorStoreConfig, ErrorAdapter, etc.
+
+## More
+
+- [FAQ](https://unified-error-handling-docs.aoneahsan.com/faq)
+- [Changelog](https://unified-error-handling-docs.aoneahsan.com/changelog)
+- [About the author](https://unified-error-handling-docs.aoneahsan.com/about-the-author)

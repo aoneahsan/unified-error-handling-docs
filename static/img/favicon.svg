@@ -1,0 +1,13 @@
+<svg width="32" height="32" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Unified Error Handling">
+  <defs>
+    <linearGradient id="ueh-fav-grad" x1="4" y1="4" x2="44" y2="44" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fb7185"/>
+      <stop offset="0.55" stop-color="#e11d48"/>
+      <stop offset="1" stop-color="#9f1239"/>
+    </linearGradient>
+  </defs>
+  <rect x="2" y="2" width="44" height="44" rx="12" fill="url(#ueh-fav-grad)"/>
+  <path d="M24 10l10 3.8v7.4c0 7-4.3 12-10 14-5.7-2-10-7-10-14v-7.4L24 10z" fill="#fff" fill-opacity="0.14" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/>
+  <rect x="22.4" y="17" width="3.2" height="9" rx="1.6" fill="#fff"/>
+  <circle cx="24" cy="30.2" r="1.9" fill="#fff"/>
+</svg>
