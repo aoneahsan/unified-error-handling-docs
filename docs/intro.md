@@ -3,13 +3,13 @@ id: intro
 title: Unified Error Handling
 sidebar_label: Introduction
 slug: /intro
-description: unified-error-handling is a zero-dependency error-handling library with dynamic adapter loading for Sentry, Firebase, Datadog, Bugsnag, Rollbar, LogRocket, Raygun, AppCenter, and custom services.
-keywords: [error handling, error tracking, crash reporting, sentry, firebase crashlytics, bugsnag, zero dependency, typescript]
+description: unified-error-handling is a zero-dependency error-handling library with dynamic service adapters and an optional React entry.
+keywords: [error handling, error tracking, crash reporting, sentry, bugsnag, zero dependency, typescript]
 ---
 
 # Unified Error Handling
 
-`unified-error-handling` is a zero-dependency TypeScript library that puts multiple error-tracking services behind **one provider-less API**. You initialize the store once, pick an adapter with `useAdapter('sentry')` (or `firebase`, `datadog`, `bugsnag`, `rollbar`, `logrocket`, `raygun`, `appcenter`, the built-in `console`, or your own), and every `captureError()` call from anywhere in your app is normalized, enriched, and routed to that service.
+`unified-error-handling` is a zero-dependency TypeScript library that puts error-tracking services behind **one provider-less API**. You initialize the store once, pick a working adapter with `useAdapter('sentry')` (or `datadog`, `bugsnag`, `rollbar`, `logrocket`, `raygun`, `appcenter`, the built-in `console`, or your own), and each `captureError()` call is normalized, enriched, and routed to that service.
 
 It is published on npm as [`unified-error-handling`](https://www.npmjs.com/package/unified-error-handling) and is MIT-licensed.
 
@@ -30,6 +30,7 @@ Honest framing matters more than a long feature list.
 - It does **not** install the service SDKs for you. To use the Sentry adapter you install `@sentry/browser` yourself; the library loads it dynamically and tells you exactly what to install if it is missing.
 - It dispatches each error to the **single active adapter** (the last one passed to `useAdapter()`), not to all registered adapters at once. Switching adapters re-points the active one.
 - The built-in interceptors and global handlers are **browser-oriented** (they rely on `window`). In Node.js the core store, manual `captureError()`, and custom adapters work, but `window`-based capture does not.
+- The `firebase` adapter shipped in `2.1.1` imports a Firebase JavaScript SDK subpath that does not exist, so it cannot be activated. See the [Firebase adapter status](/providers/firebase).
 
 ## Where to go next
 

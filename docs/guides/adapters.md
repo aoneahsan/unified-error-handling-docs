@@ -32,7 +32,7 @@ Because step 2 does a dynamic import, `useAdapter()` is async. Await it so you k
 
 ## Built-in adapter names
 
-`console`, `sentry`, `firebase`, `datadog`, `bugsnag`, `rollbar`, `logrocket`, `raygun`, `appcenter`. The `console` adapter needs no SDK; the rest dynamically import their package (see [Installation](/getting-started/installation)).
+`console`, `sentry`, `firebase`, `datadog`, `bugsnag`, `rollbar`, `logrocket`, `raygun`, `appcenter`. The `console` adapter needs no SDK; working service adapters dynamically import their package (see [Installation](/getting-started/installation)). The `firebase` adapter in `2.1.1` is registered but cannot load because the Firebase JavaScript SDK has no `firebase/crashlytics` export.
 
 ## Switching adapters
 

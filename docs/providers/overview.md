@@ -17,7 +17,7 @@ A **provider** is an error-tracking service reachable through an adapter. You ac
 | [Console](/providers/console) | `console` | — built-in | Logs to the console; ideal for development. |
 | [Custom](/providers/custom) | `custom` | — | Your own `send` callback (any backend). |
 | [Sentry](/providers/sentry) | `sentry` | `@sentry/browser` | Errors, messages, breadcrumbs, user context. |
-| [Firebase Crashlytics](/providers/firebase) | `firebase` | `firebase` | Firebase app + analytics events. |
+| [Firebase](/providers/firebase) | `firebase` | Unavailable in `2.1.1` | The adapter imports a nonexistent Firebase JavaScript SDK Crashlytics subpath. |
 | [Datadog](/providers/datadog) | `datadog` | `@datadog/browser-rum` + `@datadog/browser-logs` | RUM + Logs. |
 | [Bugsnag](/providers/bugsnag) | `bugsnag` | `@bugsnag/js` | Error monitoring. |
 | [Rollbar](/providers/rollbar) | `rollbar` | `rollbar` | Error tracking. |
@@ -49,3 +49,4 @@ Each provider page documents its config object. Activation:
 - **You own the credentials.** DSNs, client tokens, and API keys are passed by you and never bundled by the library.
 - **Optional methods vary.** Some adapters implement `setContext`, `addBreadcrumb`, `flush`, and `close`; the store calls these only when the adapter provides them.
 - **AppCenter is mobile-oriented.** Its SDKs target React Native; on the web, prefer another adapter.
+- **Firebase is unavailable in `2.1.1`.** Installing the Firebase JavaScript SDK does not provide `firebase/crashlytics`; activation fails before an event can be sent.

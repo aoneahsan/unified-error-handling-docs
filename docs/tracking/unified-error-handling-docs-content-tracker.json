@@ -1,0 +1,144 @@
+{
+  "$schema": "unified-error-handling-docs-seo-content-tracker",
+  "description": "Per-page SEO/AEO content enrichment progress for the unified-error-handling-docs site. Resumable across sessions. The docs site lives in its own PUBLIC repo (github.com/aoneahsan/unified-error-handling-docs).",
+  "docsRepo": "github.com/aoneahsan/unified-error-handling-docs",
+  "docsRoot": "docs",
+  "liveUrl": "https://unified-error-handling-docs.aoneahsan.com",
+  "totalPages": 26,
+  "enrichedPages": 26,
+  "remainingPages": 0,
+  "lastUpdated": "2026-10-20",
+  "batchSize": 15,
+  "wordsPerPageMin": 250,
+  "expert": "Ahsan Mahmood",
+  "seoFloor": {
+    "robotsAiBotAllowlist": true,
+    "sitemapXml": true,
+    "llmsTxt": true,
+    "jsonLd": [
+      "WebSite",
+      "Organization",
+      "SoftwareSourceCode"
+    ],
+    "perPageMetaAndOG": true,
+    "securityTxt": true,
+    "humansTxt": true
+  },
+  "pages": [
+    {
+      "id": "intro",
+      "status": "complete"
+    },
+    {
+      "id": "getting-started/installation",
+      "status": "complete"
+    },
+    {
+      "id": "getting-started/quick-start",
+      "status": "complete"
+    },
+    {
+      "id": "getting-started/configuration",
+      "status": "complete"
+    },
+    {
+      "id": "guides/adapters",
+      "status": "complete"
+    },
+    {
+      "id": "guides/context-and-breadcrumbs",
+      "status": "complete"
+    },
+    {
+      "id": "guides/offline-and-interceptors",
+      "status": "complete"
+    },
+    {
+      "id": "guides/custom-adapters",
+      "status": "complete"
+    },
+    {
+      "id": "guides/react",
+      "status": "complete"
+    },
+    {
+      "id": "providers/overview",
+      "status": "complete"
+    },
+    {
+      "id": "providers/console",
+      "status": "complete"
+    },
+    {
+      "id": "providers/sentry",
+      "status": "complete"
+    },
+    {
+      "id": "providers/firebase",
+      "status": "complete"
+    },
+    {
+      "id": "providers/datadog",
+      "status": "complete"
+    },
+    {
+      "id": "providers/bugsnag",
+      "status": "complete"
+    },
+    {
+      "id": "providers/rollbar",
+      "status": "complete"
+    },
+    {
+      "id": "providers/logrocket",
+      "status": "complete"
+    },
+    {
+      "id": "providers/raygun",
+      "status": "complete"
+    },
+    {
+      "id": "providers/appcenter",
+      "status": "complete"
+    },
+    {
+      "id": "providers/custom",
+      "status": "complete"
+    },
+    {
+      "id": "api/core",
+      "status": "complete"
+    },
+    {
+      "id": "api/react",
+      "status": "complete"
+    },
+    {
+      "id": "api/types",
+      "status": "complete"
+    },
+    {
+      "id": "faq",
+      "status": "complete"
+    },
+    {
+      "id": "changelog",
+      "status": "complete"
+    },
+    {
+      "id": "about-the-author",
+      "status": "complete"
+    }
+  ],
+  "nextBatchSuggestion": {
+    "rationale": "Add pages only when package source or verified user needs justify them. Keep the 26 current pages aligned with exports and open issues.",
+    "candidatePages": []
+  },
+  "hosting": "GitHub Pages through .github/workflows/deploy-pages.yml and static/CNAME",
+  "verification": "2026-10-20: Yarn 4.17.1 install --immutable, typecheck, and Docusaurus build passed. Exact home and Firebase status pages rendered in controlled desktop and mobile Chrome.",
+  "maintenanceNotes": [
+    "GitHub Pages is the only recorded deployment authority.",
+    "Firebase adapter documentation now matches the known 2.1.1 module-resolution failure.",
+    "Routine context review is next eligible on 2026-11-19."
+  ]
+}

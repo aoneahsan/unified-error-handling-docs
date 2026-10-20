@@ -1,53 +1,21 @@
 ---
 id: firebase
-title: Firebase Adapter
+title: Firebase Adapter Status
 sidebar_label: Firebase
-description: Route unified-error-handling errors to Firebase. Install firebase, then useAdapter('firebase', { firebaseConfig }).
-keywords: [firebase adapter, firebase crashlytics, firebase analytics, error tracking firebase]
+description: The Firebase adapter in unified-error-handling 2.1.1 cannot load because the Firebase JavaScript SDK has no Crashlytics subpath.
+keywords: [firebase adapter, firebase crashlytics, adapter limitation]
 ---
 
-# Firebase Adapter
+# Firebase Adapter Status
 
-Forward captured errors to a [Firebase](https://firebase.google.com) project (Firebase app + analytics events).
+The `firebase` adapter is present in package version `2.1.1`, but it cannot be activated.
 
-## Install
+Its implementation imports `firebase/crashlytics`. The Firebase JavaScript SDK does not export that
+module, so `useAdapter('firebase', config)` rejects during SDK loading. Installing `firebase` does not
+resolve the failure.
 
-```bash
-yarn add firebase
-```
+Use another supported service adapter or a [custom adapter](/providers/custom) for a web application.
+Do not use the `firebase` adapter until a package release replaces or removes the unsupported import.
 
-## Activate
-
-```ts
-import { initialize, useAdapter } from 'unified-error-handling';
-
-initialize();
-
-await useAdapter('firebase', {
-  firebaseConfig: {
-    apiKey: 'your-api-key',
-    authDomain: 'your-app.firebaseapp.com',
-    projectId: 'your-app',
-    appId: 'your-app-id',
-    measurementId: 'G-XXXXXXX',
-  },
-});
-```
-
-## Config
-
-| Field | Purpose |
-|-------|---------|
-| `firebaseConfig` | Your standard Firebase web config object (`apiKey`, `authDomain`, `projectId`, `appId`, `measurementId`, …). |
-
-The adapter initializes a Firebase app and, where available, Firebase Analytics. Analytics initialization is guarded — if it is not available in the current environment, the adapter continues without it instead of failing.
-
-## Notes
-
-- `firebase` is loaded dynamically on activation. If it is not installed, activation throws `Failed to load Firebase SDK…` with the original error as `cause`.
-- The web Firebase SDK surfaces analytics events; native crash reporting (Crashlytics) on iOS/Android is a native concern outside this web adapter's scope.
-- Provide `measurementId` if you want analytics events recorded.
-
-:::note
-This adapter uses the standard `firebase` web SDK directly. It does **not** depend on `@capacitor-firebase/crashlytics` or `@capacitor-firebase/performance`.
-:::
+This limitation concerns the package adapter. It does not require any change to an application's existing
+Firebase backend.

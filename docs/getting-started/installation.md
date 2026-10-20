@@ -29,7 +29,7 @@ Service SDKs are **not** bundled. Each adapter loads its SDK with a dynamic `imp
 | `console` | — (built-in) |
 | `custom` | — (you provide the callbacks) |
 | `sentry` | `yarn add @sentry/browser` |
-| `firebase` | `yarn add firebase` |
+| `firebase` | Unavailable in package `2.1.1`; installing `firebase` does not supply the imported `firebase/crashlytics` subpath. |
 | `datadog` | `yarn add @datadog/browser-rum @datadog/browser-logs` |
 | `bugsnag` | `yarn add @bugsnag/js` |
 | `rollbar` | `yarn add rollbar` |

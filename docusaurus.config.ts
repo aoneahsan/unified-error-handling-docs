@@ -16,10 +16,10 @@ const DOCS_REPO_URL = 'https://github.com/aoneahsan/unified-error-handling-docs'
 const config: Config = {
   title: 'Unified Error Handling Docs',
   tagline:
-    'Zero-dependency error handling with dynamic adapter loading — one API for Sentry, Firebase, Datadog, Bugsnag, Rollbar, LogRocket, Raygun, AppCenter, and your own service.',
+    'Zero-dependency error handling with dynamic adapter loading for Sentry, Datadog, Bugsnag, Rollbar, LogRocket, Raygun, AppCenter, and custom services.',
   favicon: 'img/favicon.svg',
 
-  // Production URL — served from Firebase Hosting / GitHub Pages at the custom domain.
+  // Production URL — served from GitHub Pages at the custom domain.
   url: SITE_URL,
   baseUrl: '/',
 
@@ -62,7 +62,7 @@ const config: Config = {
         name: 'Unified Error Handling Documentation',
         url: SITE_URL,
         description:
-          'Documentation for unified-error-handling, a lightweight zero-dependency error-handling library with dynamic adapter loading for multiple error-tracking services (Sentry, Firebase Crashlytics, Datadog, Bugsnag, Rollbar, LogRocket, Raygun, AppCenter) plus a built-in console adapter and custom adapters. Provider-less store API for React, Vue, Angular, Node.js, and vanilla JS. Author: Ahsan Mahmood.',
+          'Documentation for unified-error-handling, a zero-dependency error-handling library with dynamic adapters, a built-in console adapter, custom adapters, and an optional React entry. Author: Ahsan Mahmood.',
         inLanguage: 'en',
         publisher: {
           '@type': 'Person',
@@ -87,7 +87,7 @@ const config: Config = {
         name: 'unified-error-handling',
         codeRepository: REPO_URL,
         programmingLanguage: 'TypeScript',
-        runtimePlatform: 'Web, Node.js, React Native',
+        runtimePlatform: 'Web, Node.js',
         url: NPM_URL,
         sameAs: NPM_URL,
         author: {
@@ -96,7 +96,7 @@ const config: Config = {
           url: 'https://aoneahsan.com',
         },
         description:
-          'Zero-dependency error-handling library with dynamic, tree-shakeable adapter loading for Sentry, Firebase, Datadog, Bugsnag, Rollbar, LogRocket, Raygun, AppCenter, and custom services. Provider-less store API plus optional React error boundary and hooks. MIT-licensed.',
+          'Zero-dependency error-handling library with dynamic adapter loading, a provider-less store API, custom adapters, and optional React error boundaries and hooks. MIT-licensed.',
         license: 'https://opensource.org/licenses/MIT',
       }),
     },
@@ -151,7 +151,10 @@ const config: Config = {
             '**/_*/**',
             '**/*.test.{js,jsx,ts,tsx}',
             '**/__tests__/**',
+            'AGENTS.md',
+            'CLAUDE.md',
             'MANUAL-TASKS.md',
+            'tracking/**',
           ],
           routeBasePath: '/',
           editUrl: `${DOCS_REPO_URL}/edit/main/`,
@@ -178,7 +181,7 @@ const config: Config = {
       {
         name: 'description',
         content:
-          'Documentation for unified-error-handling — a zero-dependency error-handling library with dynamic adapter loading for Sentry, Firebase, Datadog, Bugsnag, Rollbar, LogRocket, Raygun, AppCenter, and custom services. Provider-less store API + optional React boundary/hooks. Maintained by Ahsan Mahmood.',
+          'Documentation for unified-error-handling, a zero-dependency error-handling library with dynamic adapters, a provider-less store API, and optional React boundaries and hooks. Maintained by Ahsan Mahmood.',
       },
       {
         name: 'keywords',

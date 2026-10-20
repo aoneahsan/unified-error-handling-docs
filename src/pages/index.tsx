@@ -14,7 +14,7 @@ type Feature = {
 const FEATURES: Feature[] = [
   {
     title: 'One API, many services',
-    body: 'Route errors to Sentry, Firebase Crashlytics, Datadog, Bugsnag, Rollbar, LogRocket, Raygun, AppCenter, a built-in console adapter, or your own backend — all behind the same captureError() call.',
+    body: 'Route errors to Sentry, Datadog, Bugsnag, Rollbar, LogRocket, Raygun, AppCenter, a built-in console adapter, or your own backend through the same captureError() call.',
   },
   {
     title: 'Zero dependencies',
@@ -104,7 +104,7 @@ export default function Home(): ReactNode {
   return (
     <Layout
       title={`${siteConfig.title} — Zero-dependency error tracking`}
-      description="Documentation for unified-error-handling: route errors to Sentry, Firebase, Datadog, Bugsnag, Rollbar, LogRocket, Raygun, AppCenter, or your own backend through one zero-dependency, provider-less API."
+      description="Documentation for unified-error-handling: route errors through dynamic service adapters or your own backend with one zero-dependency, provider-less API."
     >
       <HomepageHeader />
       <main>
